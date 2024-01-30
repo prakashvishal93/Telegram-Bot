@@ -1,3 +1,4 @@
+const { default: axios } = require('axios');
 const { Telegraf } = require('telegraf');
 
 // How to get the secret token for creating a bot ? ---> Open telegram and search for BotFather
@@ -57,8 +58,8 @@ bot.command('binarysearchjs', (ctx) => ctx.reply(binarySearch));
 bot.command('whomadethis', (ctx) =>
   ctx.reply('Vishal Prakash : @prakashvishal93 ')
 );
-bot.command('binarytreejs',async function(ctx){
-	const response = await
+bot.command('binarytreejs', async function (ctx) {
+  const response = await axios.get();
 });
 
 bot.on('sticker', (ctx) => ctx.reply('❤️'));
